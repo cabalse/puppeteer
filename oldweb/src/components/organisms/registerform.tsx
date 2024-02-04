@@ -17,13 +17,13 @@ const RegisterForm = () => {
   };
 
   const sendRegistration = (productnumber: string, name: string) => {
-    fetch("/api/products", {
+    const body = JSON.stringify({ productnumber: productnumber, name: name });
+    fetch("http://localhost:3000/api/products", {
       method: "POST",
       headers: {
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ productnumber: productnumber, name: name }),
+      body: body,
     })
       .then(() => {
         setStatusMessage("Ok");
@@ -36,6 +36,7 @@ const RegisterForm = () => {
   return (
     <div className="flex flex-col space-y-3">
       <InputField
+        id="productName"
         label={"product name"}
         onChange={(value) =>
           setInputValue<Product>((prevValue) => {
@@ -44,6 +45,7 @@ const RegisterForm = () => {
         }
       />
       <InputField
+        id="productNumber"
         label={"product number"}
         onChange={(value) =>
           setInputValue<Product>((prevValue) => {

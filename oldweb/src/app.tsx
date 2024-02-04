@@ -9,7 +9,7 @@ import PageLayout from "./components/pagelayout";
 import About from "./components/pages/about";
 import Register from "./components/pages/register";
 
-const title = "The Old Web";
+const title = "The Web";
 
 const App = () => {
   return (

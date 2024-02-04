@@ -31,6 +31,7 @@ const MenuBar = () => {
         <p>ABOUT</p>
       </MenuItem>
       <MenuItem
+        id="register"
         onClick={() => {
           setSelectedMenu("register");
           nav("/register");

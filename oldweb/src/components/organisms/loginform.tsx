@@ -32,6 +32,7 @@ const Loginform = () => {
   return (
     <div className="flex flex-col space-y-3">
       <InputField
+        id={"username"}
         label={"username"}
         onChange={(value) =>
           setInputValue<LoginInformation>((prevValue) => {
@@ -40,7 +41,9 @@ const Loginform = () => {
         }
       />
       <InputField
+        id={"password"}
         label={"password"}
+        type={"password"}
         onChange={(value) =>
           setInputValue<LoginInformation>((prevValue) => {
             return { ...prevValue, password: value };

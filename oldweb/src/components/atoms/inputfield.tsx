@@ -3,9 +3,11 @@ import React, { useState } from "react";
 type Props = {
   label: string;
   onChange: (value: string) => void;
+  id?: string;
+  type?: string;
 };
 
-const InputField = ({ label, onChange }: Props) => {
+const InputField = ({ label, onChange, id = "", type = "text" }: Props) => {
   const [value, setValue] = useState("");
 
   return (
@@ -14,8 +16,8 @@ const InputField = ({ label, onChange }: Props) => {
         {label}
       </label>
       <input
-        id={label}
-        type="text"
+        id={id}
+        type={type}
         className="border border-gray-400 p-2 w-full"
         value={value}
         onChange={(e) =>

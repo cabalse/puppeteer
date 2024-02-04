@@ -8,7 +8,7 @@ import mirageServer from "./mirage/mirageserver";
 
 const root = createRoot(document.getElementById("app"));
 
-mirageServer();
+// mirageServer();
 
 root.render(
   <StrictMode>

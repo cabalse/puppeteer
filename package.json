@@ -1,0 +1,16 @@
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "oldweb": "npm run --prefix oldweb dev",
+    "newweb": "npm run --prefix newweb dev",
+    "dev": "concurrently \"npm run oldweb\" \"npm run newweb\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
